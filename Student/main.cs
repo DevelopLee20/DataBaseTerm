@@ -18,6 +18,7 @@ namespace Student
         String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
         OleDbConnection conn;
         static public String number;
+        static public String vals;
 
         public main()
         {
@@ -35,6 +36,8 @@ namespace Student
                 String id = textBox1.Text;
                 String passwd = textBox2.Text;
                 String query;
+
+                vals = val;
 
                 if(val == "관리자" && id == "admin" && passwd == "123123")
                 {
@@ -58,14 +61,30 @@ namespace Student
                         passwd = sb.ToString();
                     }
 
-                    OleDbCommand cmd = new OleDbCommand();
-                    query = $"SELECT * FROM {val} WHERE 학번='{id}' AND 비밀번호='{passwd}'";
-                    cmd.CommandText = query;
-                    Console.WriteLine($"SELECT * FROM {val} WHERE 학번={id} AND 비밀번호={passwd};");
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Connection = conn;
+                    OleDbDataReader read = null;
+                    OleDbCommand cmd = null;
 
-                    OleDbDataReader read = cmd.ExecuteReader();
+                    if (val == "학생")
+                    {
+                        cmd = new OleDbCommand();
+                        query = $"SELECT * FROM {val} WHERE 학번='{id}' AND 비밀번호='{passwd}'";
+                        cmd.CommandText = query;
+                        Console.WriteLine($"SELECT * FROM {val} WHERE 학번={id} AND 비밀번호={passwd};");
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = conn;
+                    }
+                    else if(val == "교수")
+                    {
+                        cmd = new OleDbCommand();
+                        query = $"SELECT * FROM {val} WHERE 교수번호='{id}' AND 비밀번호='{passwd}'";
+                        cmd.CommandText = query;
+                        Console.WriteLine($"SELECT * FROM {val} WHERE 학번={id} AND 비밀번호={passwd};");
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = conn;
+
+                    }
+
+                    read = cmd.ExecuteReader();
 
                     if (!read.Read())
                     {
@@ -79,6 +98,19 @@ namespace Student
                         {
                             password_change page = new password_change();
                             page.Show();
+                        }
+                        else
+                        {
+                            if(val == "교수")
+                            {
+                                MessageBox.Show(number + "교수님 환영합니다.");
+                                Professor page = new Professor();
+                                page.Show();
+                            }
+                            else
+                            {
+                                // 학생일 때 페이지 작성
+                            }
                         }
                     }
 

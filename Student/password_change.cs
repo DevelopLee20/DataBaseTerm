@@ -30,7 +30,7 @@ namespace Student
 
             if (pw1 == pw2)
             {
-                if (pw1.Length > 5)
+                if (pw1.Length >= 5)
                 {
                     SHA256 hash = new SHA256Managed();
                     byte[] bytes = hash.ComputeHash(Encoding.ASCII.GetBytes(pw1));
@@ -43,16 +43,38 @@ namespace Student
 
                     String newpw = sb.ToString();
 
-                    OleDbCommand cmd = new OleDbCommand();
-                    String query = $"UPDATE 학생 SET 비밀번호 = '{newpw}' WHERE 학번='{main.number}'";
-                    cmd.CommandText = query;
-                    cmd.CommandType = CommandType.Text;
-                    String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
-                    OleDbConnection conn = new OleDbConnection(ConnectString);
-                    conn.Open();
-                    cmd.Connection = conn;
+                    if(main.vals == "학생")
+                    {
+                        OleDbCommand cmd = new OleDbCommand();
+                        String query = $"UPDATE 학생 SET 비밀번호 = '{newpw}' WHERE 학번='{main.number}'";
+                        cmd.CommandText = query;
+                        cmd.CommandType = CommandType.Text;
+                        String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                        OleDbConnection conn = new OleDbConnection(ConnectString);
+                        conn.Open();
+                        cmd.Connection = conn;
 
-                    MessageBox.Show("비밀번호가 변경되었습니다.");
+                        OleDbDataReader read = cmd.ExecuteReader();
+
+                        MessageBox.Show("비밀번호가 변경되었습니다.");
+                        this.Close();
+                    }
+                    else if(main.vals == "교수")
+                    {
+                        OleDbCommand cmd = new OleDbCommand();
+                        String query = $"UPDATE 교수 SET 비밀번호 = '{newpw}' WHERE 교수번호='{main.number}'";
+                        cmd.CommandText = query;
+                        cmd.CommandType = CommandType.Text;
+                        String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                        OleDbConnection conn = new OleDbConnection(ConnectString);
+                        conn.Open();
+                        cmd.Connection = conn;
+
+                        OleDbDataReader read = cmd.ExecuteReader();
+
+                        MessageBox.Show("비밀번호가 변경되었습니다.");
+                        this.Close();
+                    }
                 }
                 else
                 {

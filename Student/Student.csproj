@@ -64,6 +64,12 @@
     <Compile Include="password_change.Designer.cs">
       <DependentUpon>password_change.cs</DependentUpon>
     </Compile>
+    <Compile Include="Professor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professor.Designer.cs">
+      <DependentUpon>Professor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="admin_page.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="password_change.resx">
       <DependentUpon>password_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professor.resx">
+      <DependentUpon>Professor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

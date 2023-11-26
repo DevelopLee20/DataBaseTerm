@@ -10,3 +10,4 @@ C:\Users\dldls\OneDrive\바탕 화면\2학기 수업자료\데이터베이스\St
 C:\Users\dldls\OneDrive\바탕 화면\2학기 수업자료\데이터베이스\Student\Student\Student\obj\Debug\Student.pdb
 C:\Users\dldls\OneDrive\바탕 화면\2학기 수업자료\데이터베이스\Student\Student\Student\obj\Debug\Student.password_change.resources
 C:\Users\dldls\OneDrive\바탕 화면\2학기 수업자료\데이터베이스\Student\Student\Student\obj\Debug\Student.admin_page.resources
+C:\Users\dldls\OneDrive\바탕 화면\2학기 수업자료\데이터베이스\Student\Student\Student\obj\Debug\Student.Professor.resources
