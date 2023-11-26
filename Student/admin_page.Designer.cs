@@ -66,6 +66,15 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -417,11 +426,103 @@
             this.label18.TabIndex = 48;
             this.label18.Text = "학과이름";
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Location = new System.Drawing.Point(769, 328);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(203, 39);
+            this.button4.TabIndex = 58;
+            this.button4.Text = "개설 과목 등록";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox18
+            // 
+            this.textBox18.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox18.Location = new System.Drawing.Point(856, 189);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(116, 29);
+            this.textBox18.TabIndex = 57;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox19.Location = new System.Drawing.Point(856, 154);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(116, 29);
+            this.textBox19.TabIndex = 56;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox20.Location = new System.Drawing.Point(856, 119);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(116, 29);
+            this.textBox20.TabIndex = 55;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox21.Location = new System.Drawing.Point(856, 86);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(116, 29);
+            this.textBox21.TabIndex = 54;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label19.Location = new System.Drawing.Point(765, 189);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 19);
+            this.label19.TabIndex = 53;
+            this.label19.Text = "담당교수";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label20.Location = new System.Drawing.Point(784, 157);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(47, 19);
+            this.label20.TabIndex = 52;
+            this.label20.Text = "학기";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label21.Location = new System.Drawing.Point(784, 122);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 19);
+            this.label21.TabIndex = 51;
+            this.label21.Text = "연도";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label22.Location = new System.Drawing.Point(765, 89);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(85, 19);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "과목번호";
+            // 
             // admin_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1073, 450);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.textBox20);
+            this.Controls.Add(this.textBox21);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.button3);
@@ -507,5 +608,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
     }
 }

@@ -84,5 +84,28 @@ namespace Student
                 MessageBox.Show("Error: " + ex.Message); //에러 메세지
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                String query = $"INSERT INTO 개설과목 VALUES('{textBox21.Text}', '{textBox20.Text}', '{textBox19.Text}', '{textBox18.Text}', NULL)";
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.Text;
+                String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                OleDbConnection conn = new OleDbConnection(ConnectString);
+                conn.Open();
+                cmd.Connection = conn;
+
+                OleDbDataReader read = cmd.ExecuteReader();
+
+                MessageBox.Show("개설 과목 등록 완료\n" + query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message); //에러 메세지
+            }
+        }
     }
 }
