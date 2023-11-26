@@ -109,7 +109,9 @@ namespace Student
                             }
                             else
                             {
-                                // 학생일 때 페이지 작성
+                                MessageBox.Show(number + "학생 환영합니다.");
+                                Student_page page = new Student_page();
+                                page.Show();
                             }
                         }
                     }
