@@ -52,14 +52,7 @@ namespace Student
                     conn.Open();
                     cmd.Connection = conn;
 
-                    OleDbDataReader read = cmd.ExecuteReader();
-
-                    if (read.Read())
-                    {
-                        MessageBox.Show("비밀번호가 변경되었습니다.");
-                    }
-
-                    read.Close();
+                    MessageBox.Show("비밀번호가 변경되었습니다.");
                 }
                 else
                 {

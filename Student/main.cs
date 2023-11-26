@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Security.Cryptography;
 
 namespace Student
 {
@@ -34,6 +35,20 @@ namespace Student
                 String id = textBox1.Text;
                 String passwd = textBox2.Text;
                 String query;
+
+                if(passwd != "0000")
+                {
+                    SHA256 hash = new SHA256Managed();
+                    byte[] bytes = hash.ComputeHash(Encoding.ASCII.GetBytes(passwd));
+
+                    StringBuilder sb = new StringBuilder();
+                    foreach (byte b in bytes)
+                    {
+                        sb.AppendFormat("{0:x2}", b);
+                    }
+
+                    passwd = sb.ToString();
+                }
 
                 OleDbCommand cmd = new OleDbCommand();
                 query = $"SELECT * FROM {val} WHERE 학번='{id}' AND 비밀번호='{passwd}'";
