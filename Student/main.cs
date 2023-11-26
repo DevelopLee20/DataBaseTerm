@@ -38,7 +38,9 @@ namespace Student
 
                 if(val == "관리자" && id == "admin" && passwd == "123123")
                 {
-                    
+                    MessageBox.Show("어드민 페이지로 접속합니다.");
+                    admin_page page = new admin_page();
+                    page.Show();
                 }
                 else
                 {

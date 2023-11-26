@@ -141,7 +141,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(130, 86);
+            this.textBox2.Location = new System.Drawing.Point(130, 119);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 29);
             this.textBox2.TabIndex = 15;
@@ -149,7 +149,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(130, 119);
+            this.textBox1.Location = new System.Drawing.Point(130, 86);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 29);
             this.textBox1.TabIndex = 16;
@@ -195,6 +195,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "학생 등록";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -205,6 +206,7 @@
             this.button2.TabIndex = 34;
             this.button2.Text = "교수 등록";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox7
             // 
@@ -287,6 +289,7 @@
             this.button3.TabIndex = 47;
             this.button3.Text = "과목 등록";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox8
             // 
