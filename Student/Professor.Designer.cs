@@ -54,7 +54,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(28, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(472, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(659, 247);
             this.dataGridView1.TabIndex = 1;
             // 
             // textBox2
@@ -62,7 +62,7 @@
             this.textBox2.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox2.Location = new System.Drawing.Point(153, 326);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 39);
+            this.textBox2.Size = new System.Drawing.Size(426, 39);
             this.textBox2.TabIndex = 13;
             // 
             // textBox1
@@ -70,7 +70,7 @@
             this.textBox1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox1.Location = new System.Drawing.Point(153, 371);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 39);
+            this.textBox1.Size = new System.Drawing.Size(426, 39);
             this.textBox1.TabIndex = 14;
             // 
             // label2
@@ -96,12 +96,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(398, 326);
+            this.button1.Location = new System.Drawing.Point(585, 326);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 84);
             this.button1.TabIndex = 17;
             this.button1.Text = "교재 등록";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Professor
             // 
