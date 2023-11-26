@@ -75,6 +75,14 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -509,11 +517,84 @@
             this.label22.TabIndex = 50;
             this.label22.Text = "과목번호";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(43, 492);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(929, 247);
+            this.dataGridView2.TabIndex = 59;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label23.Location = new System.Drawing.Point(38, 445);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(192, 27);
+            this.label23.TabIndex = 60;
+            this.label23.Text = "전체 수강 명부";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.Location = new System.Drawing.Point(819, 445);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(153, 39);
+            this.button5.TabIndex = 62;
+            this.button5.Text = "수강 취소";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox23
+            // 
+            this.textBox23.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox23.Location = new System.Drawing.Point(460, 449);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(116, 29);
+            this.textBox23.TabIndex = 64;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label24.Location = new System.Drawing.Point(388, 452);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 19);
+            this.label24.TabIndex = 63;
+            this.label24.Text = "학번";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox22.Location = new System.Drawing.Point(686, 449);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(116, 29);
+            this.textBox22.TabIndex = 66;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label25.Location = new System.Drawing.Point(595, 452);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(85, 19);
+            this.label25.TabIndex = 65;
+            this.label25.Text = "과목번호";
+            // 
             // admin_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 450);
+            this.ClientSize = new System.Drawing.Size(1073, 787);
+            this.Controls.Add(this.textBox22);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.textBox23);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox19);
@@ -563,6 +644,7 @@
             this.Controls.Add(this.label1);
             this.Name = "admin_page";
             this.Text = "admin_page";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,5 +699,12 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label25;
     }
 }
