@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student
 {
-    public partial class Form1 : Form
+    public partial class password_change : Form
     {
-        public Form1()
+        public password_change()
         {
             InitializeComponent();
         }
