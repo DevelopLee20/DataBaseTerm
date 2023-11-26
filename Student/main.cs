@@ -16,6 +16,7 @@ namespace Student
     {
         String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
         OleDbConnection conn;
+        static public String number;
 
         public main()
         {
@@ -45,10 +46,12 @@ namespace Student
 
                 if(!read.Read())
                 {
-                    Console.WriteLine("없는 계정입니다.");
+                    MessageBox.Show("없는 계정입니다.");
                 }
                 else
                 {
+                    number = id;
+
                     if(passwd == "0000")
                     {
                         password_change page = new password_change();
