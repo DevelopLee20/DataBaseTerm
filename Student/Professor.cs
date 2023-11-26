@@ -104,6 +104,90 @@ namespace Student
             {
                 MessageBox.Show("Error: " + ex.Message); //에러 메세지
             }
+
+            try // 지도 학생 목록
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                String query = $"SELECT 학번, 이름, 학년 FROM 학생 WHERE 지도교수='{main.number}'";
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.Text;
+                String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                OleDbConnection conn = new OleDbConnection(ConnectString);
+                conn.Open();
+                cmd.Connection = conn;
+
+                OleDbDataReader read = cmd.ExecuteReader();
+
+                int counts = 3;
+
+                dataGridView3.ColumnCount = counts;
+
+                for (int i = 0; i < counts; i++)
+                {
+                    dataGridView3.Columns[i].Name = read.GetName(i);
+                }
+
+                while (read.Read())
+                {
+                    object[] obj = new object[counts]; // 필드수만큼 오브젝트 배열
+
+                    for (int i = 0; i < counts; i++) // 필드 수만큼 반복
+                    {
+                        obj[i] = new object();
+                        obj[i] = read.GetValue(i); // 오브젝트배열에 데이터 저장
+                    }
+
+                    dataGridView3.Rows.Add(obj); //데이터그리드뷰에 오브젝트 배열 추가
+                }
+
+                read.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message); //에러 메세지
+            }
+
+            try // 상담 내용
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                String query = $"SELECT * FROM 상담 WHERE 학번 IN (SELECT 학번 FROM 학생 WHERE 지도교수 = '{main.number}')";
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.Text;
+                String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                OleDbConnection conn = new OleDbConnection(ConnectString);
+                conn.Open();
+                cmd.Connection = conn;
+
+                OleDbDataReader read = cmd.ExecuteReader();
+
+                int counts = 3;
+
+                dataGridView4.ColumnCount = counts;
+
+                for (int i = 0; i < counts; i++)
+                {
+                    dataGridView4.Columns[i].Name = read.GetName(i);
+                }
+
+                while (read.Read())
+                {
+                    object[] obj = new object[counts]; // 필드수만큼 오브젝트 배열
+
+                    for (int i = 0; i < counts; i++) // 필드 수만큼 반복
+                    {
+                        obj[i] = new object();
+                        obj[i] = read.GetValue(i); // 오브젝트배열에 데이터 저장
+                    }
+
+                    dataGridView4.Rows.Add(obj); //데이터그리드뷰에 오브젝트 배열 추가
+                }
+
+                read.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message); //에러 메세지
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -243,6 +327,79 @@ namespace Student
             {
                 MessageBox.Show("성적은 A, B, C, F 중 하나만 입력 가능합니다.");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                String query = $"INSERT INTO 상담 VALUES('{textBox6.Text}', '{textBox7.Text}', '{textBox8.Text}')";
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.Text;
+                String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                OleDbConnection conn = new OleDbConnection(ConnectString);
+                conn.Open();
+                cmd.Connection = conn;
+
+                OleDbDataReader read = cmd.ExecuteReader();
+
+                MessageBox.Show("상담 등록 완료\n" + query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message); //에러 메세지
+            }
+
+            try // 상담 내용
+            {
+                dataGridView4.Columns.Clear();
+
+                OleDbCommand cmd = new OleDbCommand();
+                String query = $"SELECT * FROM 상담 WHERE 학번 IN (SELECT 학번 FROM 학생 WHERE 지도교수 = '{main.number}')";
+                cmd.CommandText = query;
+                cmd.CommandType = CommandType.Text;
+                String ConnectString = "Provider=MSDAORA;Password=123123;User ID=Term";
+                OleDbConnection conn = new OleDbConnection(ConnectString);
+                conn.Open();
+                cmd.Connection = conn;
+
+                OleDbDataReader read = cmd.ExecuteReader();
+
+                int counts = 3;
+
+                dataGridView4.ColumnCount = counts;
+
+                for (int i = 0; i < counts; i++)
+                {
+                    dataGridView4.Columns[i].Name = read.GetName(i);
+                }
+
+                while (read.Read())
+                {
+                    object[] obj = new object[counts]; // 필드수만큼 오브젝트 배열
+
+                    for (int i = 0; i < counts; i++) // 필드 수만큼 반복
+                    {
+                        obj[i] = new object();
+                        obj[i] = read.GetValue(i); // 오브젝트배열에 데이터 저장
+                    }
+
+                    dataGridView4.Rows.Add(obj); //데이터그리드뷰에 오브젝트 배열 추가
+                }
+
+                read.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message); //에러 메세지
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            password_change page = new password_change();
+            page.Show();
         }
     }
 }

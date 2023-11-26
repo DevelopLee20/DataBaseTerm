@@ -42,14 +42,18 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(538, 409);
+            this.button1.Location = new System.Drawing.Point(528, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 39);
             this.button1.TabIndex = 24;
@@ -178,11 +182,44 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "학기";
             // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(738, 125);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 23;
+            this.dataGridView3.Size = new System.Drawing.Size(568, 247);
+            this.dataGridView3.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(742, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(192, 27);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "나의 상담 내용";
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(1104, 13);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(202, 39);
+            this.button3.TabIndex = 36;
+            this.button3.Text = "비밀번호 변경";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Student_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 770);
+            this.ClientSize = new System.Drawing.Size(1318, 770);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox4);
@@ -201,6 +238,7 @@
             this.Text = "Student_page";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +260,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
     }
 }
